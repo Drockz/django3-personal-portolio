@@ -1,0 +1,35 @@
+{% extends "portfolio_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container text-center">
+<h1 id="blogtitle" class="font-weight-bold text-center">Password Generator App</h1>
+<form action ="{% url 'generator'%}">
+  <select  name="length">
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8" selected='selected'>8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+  </select> Pick the Length
+  <br>
+  <br>
+  <input type="checkbox" name="uppercase">upper case
+  <br>
+  <input type="checkbox" name="numbers">numbers
+  <br>
+  <input type="checkbox" name="specialcharacters">special characters
+  <br>
+  <br>
+  <input type="submit" value="Generate password" class="btn btn-primary">
+</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "portfolio_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container text-center">
+<h1 id="blogtitle" class="font-weight-bold text-center">Your password is</h1>
+<h2 class="alert alert-success"> {{ password }}</h2>
+<a href="{% url 'passgen' %}" class= "btn btn-success">BACK</a>
+<br>
+<br>
+<a onClick="window.location.reload()" class= "btn btn-success">Generate</a>
+</div>
+
+{% endblock %}
